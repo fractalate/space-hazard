@@ -1,23 +1,33 @@
-[gd_scene format=3 uid="uid://4uwevmfeg3t2"]
+[gd_scene load_steps=2 format=3 uid="uid://4uwevmfeg3t2"]
+
+[ext_resource type="Script" path="res://ship/player_ship.gd" id="1_kcjee"]
 
 [node name="PlayerShip" type="Node2D"]
+script = ExtResource("1_kcjee")
+
+[node name="TODO" type="RichTextLabel" parent="."]
+offset_left = -126.0
+offset_top = 14.0
+offset_right = 91.0
+offset_bottom = 192.0
+text = "TODO
+Tweak the design.
+Thruster
+Wings
+Lights
+Shading
+Pinstripe"
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="Body" type="Polygon2D" parent="RigidBody2D"]
 color = Color(0.792157, 0.792157, 0.792157, 1)
-polygon = PackedVector2Array(-6, -4, -3, -1, 5, -1, 7, 3, -6, 3)
+polygon = PackedVector2Array(-61, -10, -58, -9, -54, -6, -37, -4, -4, -4, 9, 0, 12, 2, 12, 8, 8, 11, -59, 11, -61, 9)
 
 [node name="Window" type="Polygon2D" parent="RigidBody2D"]
 color = Color(0, 0.729412, 0.729412, 1)
-polygon = PackedVector2Array(3, -1, 4, 1, 6, 1, 5, -1)
+polygon = PackedVector2Array(-4, -4, -4, 2, 12, 2, 9, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
-polygon = PackedVector2Array(-6, -4, -3, -1, 5, -1, 7, 3, -6, 3)
-
-[node name="TODO" type="Label" parent="."]
-offset_left = -123.0
-offset_top = -45.0
-offset_right = 131.0
-offset_bottom = -22.0
-text = "TODO: Bigger Ship. More shapes."
+visible = false
+polygon = PackedVector2Array(-59, 11, -61, 9, -61, -10, -58, -9, -54, -6, -37, -4, -4, -4, 9, 0, 12, 2, 12, 8, 8, 11)
