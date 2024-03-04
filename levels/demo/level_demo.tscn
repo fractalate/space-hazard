@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://chhklldatd5vr"]
+[gd_scene load_steps=3 format=3 uid="uid://chhklldatd5vr"]
 
 [ext_resource type="PackedScene" uid="uid://4uwevmfeg3t2" path="res://ship/player_ship.tscn" id="1_7y8bw"]
+[ext_resource type="PackedScene" uid="uid://dryjjptiwl2h4" path="res://hazards/rock.tscn" id="2_ku614"]
 
 [node name="LevelDemo" type="Node2D"]
 
 [node name="PlayerShip" parent="." instance=ExtResource("1_7y8bw")]
 position = Vector2(559, 268)
+
+[node name="Rock" parent="." instance=ExtResource("2_ku614")]
+position = Vector2(545, 210)
+
+[node name="Rock2" parent="." instance=ExtResource("2_ku614")]
+position = Vector2(672, 264)
+
+[node name="Rock3" parent="." instance=ExtResource("2_ku614")]
+position = Vector2(441, 218)
+
+[node name="Rock4" parent="." instance=ExtResource("2_ku614")]
+position = Vector2(673, 89)
+
+[node name="Rock5" parent="." instance=ExtResource("2_ku614")]
+position = Vector2(734, 309)
