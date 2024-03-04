@@ -33,25 +33,50 @@ position = Vector2(-31, -37)
 color = Color(0.494118, 0.494118, 0.494118, 1)
 polygon = PackedVector2Array(-32, 36, -32, 45, -30, 43, -30, 38)
 
+[node name="Flame" type="Polygon2D" parent="RigidBody2D/RearThruster"]
+position = Vector2(2, -2)
+color = Color(0.278431, 0.741176, 1, 0.87451)
+polygon = PackedVector2Array(-34, 39, -36, 38, -39, 39, -38, 40, -39, 41, -40, 42.5, -39, 44, -38, 45, -39, 46, -36, 47, -34, 46)
+
 [node name="FrontThruster" type="Polygon2D" parent="RigidBody2D"]
 position = Vector2(-27, -52)
 color = Color(0.494118, 0.494118, 0.494118, 1)
 polygon = PackedVector2Array(30, 58, 38, 58, 37, 60, 30, 60)
+
+[node name="Flame" type="Polygon2D" parent="RigidBody2D/FrontThruster"]
+position = Vector2(-12, 0)
+color = Color(0.278431, 0.741176, 1, 0.87451)
+polygon = PackedVector2Array(45, 58, 44, 60, 54, 60, 55, 59, 54, 58)
 
 [node name="TopThruster1" type="Polygon2D" parent="RigidBody2D"]
 position = Vector2(-2, 13)
 color = Color(0.494118, 0.494118, 0.494118, 1)
 polygon = PackedVector2Array(-34, -16, -31, -16, -31, -12, -34, -12)
 
+[node name="Flame" type="Polygon2D" parent="RigidBody2D/TopThruster1"]
+position = Vector2(-81, -82)
+color = Color(0.278431, 0.741176, 1, 0.87451)
+polygon = PackedVector2Array(47, 69, 50, 69, 50, 61, 48.5, 59, 47, 61)
+
 [node name="TopThruster2" type="Polygon2D" parent="RigidBody2D"]
 position = Vector2(2, 13)
 color = Color(0.494118, 0.494118, 0.494118, 1)
 polygon = PackedVector2Array(-34, -16, -31, -16, -31, -12, -34, -12)
 
+[node name="Flame" type="Polygon2D" parent="RigidBody2D/TopThruster2"]
+position = Vector2(-81, -82)
+color = Color(0.278431, 0.741176, 1, 0.87451)
+polygon = PackedVector2Array(47, 69, 50, 69, 50, 61, 48.5, 59, 47, 61)
+
 [node name="BottomThruster" type="Polygon2D" parent="RigidBody2D"]
 position = Vector2(0, -1)
 color = Color(0.498039, 0.498039, 0.498039, 1)
 polygon = PackedVector2Array(-36, 9, -29, 9, -29, 11, -36, 11)
+
+[node name="Flame" type="Polygon2D" parent="RigidBody2D/BottomThruster"]
+position = Vector2(-80, -36)
+color = Color(0.278431, 0.741176, 1, 0.87451)
+polygon = PackedVector2Array(44, 46, 44, 50, 47.5, 52, 51, 50, 51, 46)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
 visible = false
