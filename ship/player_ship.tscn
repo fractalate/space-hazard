@@ -7,9 +7,9 @@ script = ExtResource("1_kcjee")
 
 [node name="TODO" type="RichTextLabel" parent="."]
 offset_left = -126.0
-offset_top = 14.0
+offset_top = 42.0
 offset_right = 91.0
-offset_bottom = 192.0
+offset_bottom = 220.0
 text = "TODO
 Tweak the design.
 Thruster
@@ -28,6 +28,31 @@ polygon = PackedVector2Array(-61, -10, -58, -9, -54, -6, -37, -4, -4, -4, 9, 0, 
 color = Color(0, 0.729412, 0.729412, 1)
 polygon = PackedVector2Array(-4, -4, -4, 2, 12, 2, 9, 0)
 
+[node name="RearThruster" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(-31, -37)
+color = Color(0.494118, 0.494118, 0.494118, 1)
+polygon = PackedVector2Array(-32, 36, -32, 45, -30, 43, -30, 38)
+
+[node name="FrontThruster" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(-27, -52)
+color = Color(0.494118, 0.494118, 0.494118, 1)
+polygon = PackedVector2Array(30, 58, 38, 58, 37, 60, 30, 60)
+
+[node name="TopThruster1" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(-2, 13)
+color = Color(0.494118, 0.494118, 0.494118, 1)
+polygon = PackedVector2Array(-34, -16, -31, -16, -31, -12, -34, -12)
+
+[node name="TopThruster2" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(2, 13)
+color = Color(0.494118, 0.494118, 0.494118, 1)
+polygon = PackedVector2Array(-34, -16, -31, -16, -31, -12, -34, -12)
+
+[node name="BottomThruster" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(0, -1)
+color = Color(0.498039, 0.498039, 0.498039, 1)
+polygon = PackedVector2Array(-36, 9, -29, 9, -29, 11, -36, 11)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
 visible = false
-polygon = PackedVector2Array(-59, 11, -61, 9, -61, -10, -58, -9, -54, -6, -37, -4, -4, -4, 9, 0, 12, 2, 12, 8, 8, 11)
+polygon = PackedVector2Array(-59, 11, -61, 9, -61, 6, -63, 8, -63, -1, -61, 1, -61, -10, -58, -9, -54, -6, -37, -4, -4, -4, 9, 0, 12, 2, 12, 8, 8, 11)
