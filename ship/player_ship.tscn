@@ -5,19 +5,6 @@
 [node name="PlayerShip" type="Node2D"]
 script = ExtResource("1_kcjee")
 
-[node name="TODO" type="RichTextLabel" parent="."]
-offset_left = -126.0
-offset_top = 42.0
-offset_right = 91.0
-offset_bottom = 220.0
-text = "TODO
-Tweak the design.
-Thruster
-Wings
-Lights
-Shading
-Pinstripe"
-
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="Body" type="Polygon2D" parent="RigidBody2D"]
@@ -86,6 +73,16 @@ polygon = PackedVector2Array(-11, 17, -11, 21, -7, 21, -7, 17)
 [node name="Light" type="Polygon2D" parent="RigidBody2D/BottomLight"]
 color = Color(1, 0.462745, 0.462745, 1)
 polygon = PackedVector2Array(-11, 17, -11, 21, -7, 21, -7, 17)
+
+[node name="PinStripe" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(-2, -19)
+color = Color(0.8, 0, 0, 1)
+polygon = PackedVector2Array(14, 22, -17, 22, -17, 23, 14, 23)
+
+[node name="Wing" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(5, -17)
+color = Color(0.654902, 0.654902, 0.654902, 1)
+polygon = PackedVector2Array(-24, 20, -44, 19, -44, 22, -24, 21)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
 visible = false
