@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://4uwevmfeg3t2"]
+[gd_scene load_steps=3 format=3 uid="uid://4uwevmfeg3t2"]
 
 [ext_resource type="Script" path="res://ship/player_ship.gd" id="1_kcjee"]
+[ext_resource type="Script" path="res://ship/rigid_body_2d.gd" id="2_gui1u"]
 
 [node name="PlayerShip" type="Node2D"]
 script = ExtResource("1_kcjee")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_mask = 2
+script = ExtResource("2_gui1u")
 
 [node name="Body" type="Polygon2D" parent="RigidBody2D"]
 color = Color(0.792157, 0.792157, 0.792157, 1)

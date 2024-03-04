@@ -46,6 +46,12 @@ right={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player Ship"
+2d_physics/layer_2="Solid Hazard"
+2d_physics/layer_3="Passable Hazard"
+
 [physics]
 
 2d/default_gravity_vector=Vector2(0, 0)
