@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://chhklldatd5vr"]
+[gd_scene load_steps=4 format=3 uid="uid://chhklldatd5vr"]
 
 [ext_resource type="PackedScene" uid="uid://4uwevmfeg3t2" path="res://ship/player_ship.tscn" id="1_7y8bw"]
+[ext_resource type="Texture2D" uid="uid://dcee65nybcohb" path="res://levels/demo/backdrop.png" id="1_oyr0p"]
 [ext_resource type="PackedScene" uid="uid://dryjjptiwl2h4" path="res://hazards/rock.tscn" id="2_ku614"]
 
 [node name="LevelDemo" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_oyr0p")
+expand_mode = 1
 
 [node name="PlayerShip" parent="." instance=ExtResource("1_7y8bw")]
 position = Vector2(559, 268)
