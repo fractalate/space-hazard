@@ -3,6 +3,7 @@
 [node name="Rock" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 3
+mass = 35000.0
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.792157, 0.576471, 0.396078, 1)

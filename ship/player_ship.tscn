@@ -8,6 +8,7 @@ script = ExtResource("1_kcjee")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 collision_mask = 2
+mass = 70000.0
 script = ExtResource("2_gui1u")
 
 [node name="Body" type="Polygon2D" parent="RigidBody2D"]
