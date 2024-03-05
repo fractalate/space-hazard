@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctn8w848u7qy5"]
+
+[ext_resource type="Script" path="res://utilities/despawn_area.gd" id="1_0rac3"]
+
+[node name="DespawnArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_0rac3")
+
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-44, -68, -84, 678, 1226, 678, 1192, -29, 1283, -32, 1317, 755, -152, 736, -102, -86)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-145, -39, 1357, -68, 1373, -14, -212, -11)
