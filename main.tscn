@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://lqfyl1xi516f"]
+[gd_scene load_steps=4 format=3 uid="uid://lqfyl1xi516f"]
 
 [ext_resource type="PackedScene" uid="uid://ctn8w848u7qy5" path="res://utilities/despawn_area.tscn" id="1_b42yi"]
 [ext_resource type="Script" path="res://main.gd" id="1_c7a0q"]
+[ext_resource type="PackedScene" uid="uid://cmopyk7kjtsas" path="res://menus/main_menu.tscn" id="3_6axse"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c7a0q")
@@ -9,46 +10,4 @@ script = ExtResource("1_c7a0q")
 [node name="DespawnArea" parent="." instance=ExtResource("1_b42yi")]
 position = Vector2(16, -9)
 
-[node name="ButtonNewGame" type="Button" parent="."]
-offset_left = 556.0
-offset_top = 284.0
-offset_right = 649.0
-offset_bottom = 315.0
-focus_neighbor_bottom = NodePath("../ButtonMarathon")
-text = "New Game"
-
-[node name="ButtonMarathon" type="Button" parent="."]
-offset_left = 561.0
-offset_top = 330.0
-offset_right = 646.0
-offset_bottom = 361.0
-focus_neighbor_top = NodePath("../ButtonNewGame")
-focus_neighbor_bottom = NodePath("../ButtonHighScores")
-text = "Marathon"
-
-[node name="ButtonHighScores" type="Button" parent="."]
-offset_left = 554.0
-offset_top = 370.0
-offset_right = 653.0
-offset_bottom = 401.0
-focus_neighbor_top = NodePath("../ButtonMarathon")
-focus_neighbor_bottom = NodePath("../ButtonSettings")
-text = "High Scores
-"
-
-[node name="ButtonSettings" type="Button" parent="."]
-offset_left = 569.0
-offset_top = 415.0
-offset_right = 639.0
-offset_bottom = 446.0
-focus_neighbor_top = NodePath("../ButtonHighScores")
-focus_neighbor_bottom = NodePath("../ButtonExit")
-text = "Settings"
-
-[node name="ButtonExit" type="Button" parent="."]
-offset_left = 588.0
-offset_top = 473.0
-offset_right = 625.0
-offset_bottom = 504.0
-focus_neighbor_top = NodePath("../ButtonSettings")
-text = "Exit"
+[node name="MainMenu" parent="." instance=ExtResource("3_6axse")]

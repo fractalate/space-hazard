@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var ButtonNewGame = $ButtonNewGame
+@onready var MainMenu = $MainMenu
 
 var LevelDemo = load('res://levels/demo/level_demo.tscn')
 var PlayerShip = load('res://ship/player_ship.tscn')
@@ -12,4 +12,4 @@ func start_level_demo():
 	add_child(playerShip)
 
 func _ready():
-	ButtonNewGame.grab_focus()
+	MainMenu.select_default_button()
