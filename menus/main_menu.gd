@@ -1,6 +1,7 @@
 extends Control
 
-@onready var ButtonNewGame = $ButtonNewGame
+#@onready var ButtonNewGame = $ButtonNewGame
+@onready var ButtonMarathon = $ButtonMarathon
 
 func select_default_button():
-	ButtonNewGame.grab_focus()
+	ButtonMarathon.grab_focus()
