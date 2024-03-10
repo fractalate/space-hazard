@@ -18,7 +18,7 @@ script = ExtResource("1_c7a0q")
 [node name="DespawnArea" parent="." instance=ExtResource("1_b42yi")]
 position = Vector2(16, -9)
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Background" type="Polygon2D" parent="."]
 texture = SubResource("GradientTexture1D_0i6y3")
 texture_rotation = -1.5708
 polygon = PackedVector2Array(1152, 648, 1152, 0, 0, 0, 0, 648)

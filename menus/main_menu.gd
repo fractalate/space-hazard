@@ -1,5 +1,6 @@
 extends Control
 
+signal start_marathon
 signal menu_closed
 
 var SettingsMenu = load('res://menus/settings_menu.tscn')
@@ -20,7 +21,8 @@ func select_default_button():
 	ButtonMarathon.grab_focus()
 
 func on_button_marathon_pressed():
-	print('starting marathon')
+	start_marathon.emit()
+	menu_closed.emit()
 
 func on_button_settings_pressed():
 	var m = SettingsMenu.instantiate()
@@ -34,7 +36,6 @@ func on_button_settings_pressed():
 
 func on_button_exit_pressed():
 	menu_closed.emit()
-	queue_free()
 	# It might make sense to quit elsewhere, handling the menu_closed signal.
 	# e.g. if you need to save something that the menu doesn't track first.
 	# this is sufficient for now because we have nothing to save yet.
