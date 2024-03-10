@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc0y4t8xty02o"]
+
+[ext_resource type="Script" path="res://menus/settings_menu.gd" id="1_shhu7"]
+[ext_resource type="Theme" uid="uid://c2up455gxqrrh" path="res://menus/main_menu_button.tres" id="2_wplpy"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shhu7")
+
+[node name="ButtonBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 416.0
+offset_right = 597.0
+offset_bottom = 447.0
+theme = ExtResource("2_wplpy")
+text = "Back"
