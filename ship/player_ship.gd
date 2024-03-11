@@ -1,8 +1,5 @@
 extends Node2D
 
-# pixels per second per second
-const THRUST_ACCELERATION = 300
-
 @onready var Ship = $RigidBody2D
 @onready var RearThrusterFlame = $RigidBody2D/RearThruster/Flame
 @onready var FrontThrusterFlame = $RigidBody2D/FrontThruster/Flame
@@ -22,9 +19,8 @@ func _ready():
 	BottomThrusterFlame.visible = false
 	BottomLightLight.visible = false
 
-func _physics_process(delta):
+func _process(delta):
 	var thrust = Input.get_vector('left', 'right', 'up', 'down')
-	Ship.linear_velocity += thrust * THRUST_ACCELERATION * delta
 
 	FrontThrusterFlame.visible = thrust.x < 0
 	RearThrusterFlame.visible = thrust.x > 0

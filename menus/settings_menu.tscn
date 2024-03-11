@@ -12,11 +12,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_shhu7")
 
+[node name="ButtonTest" type="Button" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 336.0
+offset_right = 593.0
+offset_bottom = 367.0
+focus_neighbor_bottom = NodePath("../ButtonBack")
+theme = ExtResource("2_wplpy")
+text = "Test"
+
 [node name="ButtonBack" type="Button" parent="."]
 layout_mode = 0
 offset_left = 552.0
 offset_top = 416.0
 offset_right = 597.0
 offset_bottom = 447.0
+focus_neighbor_top = NodePath("../ButtonTest")
 theme = ExtResource("2_wplpy")
 text = "Back"
