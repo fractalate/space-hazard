@@ -6,10 +6,13 @@ extends Node2D
 var LevelDemo = load('res://levels/demo/level_demo.tscn')
 var PlayerShip = load('res://ship/player_ship.tscn')
 
+var viewport_width_initial = ProjectSettings.get_setting("display/window/size/viewport_width")
+var viewport_height_initial = ProjectSettings.get_setting("display/window/size/viewport_height")
+
 func start_level_demo():
 	add_child(LevelDemo.instantiate())
 	var playerShip = PlayerShip.instantiate()
-	playerShip.position = get_viewport_rect().size / 2
+	playerShip.position = Vector2(viewport_width_initial, viewport_height_initial) / 2
 	add_child(playerShip)
 
 func set_main_menu_visible(visible: bool):
