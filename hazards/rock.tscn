@@ -6,7 +6,13 @@ collision_mask = 3
 mass = 35000.0
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.792157, 0.576471, 0.396078, 1)
+color = Color(0.415686, 0.223529, 0.180392, 1)
+polygon = PackedVector2Array(-4, -3, 1, -4, 4, -2, 6, 0, 5, 2, 3, 5, 0, 4, -5, 4, -7, -1)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(0.666667, -0.444444)
+scale = Vector2(0.888889, 0.888889)
+color = Color(0.717647, 0.431373, 0.364706, 1)
 polygon = PackedVector2Array(-4, -3, 1, -4, 4, -2, 6, 0, 5, 2, 3, 5, 0, 4, -5, 4, -7, -1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
