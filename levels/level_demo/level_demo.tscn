@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://btgpptrjayqun"]
+
+[ext_resource type="Script" path="res://levels/level_demo/level_demo.gd" id="1_1keww"]
+[ext_resource type="Texture2D" uid="uid://cvr68gm76rqk2" path="res://levels/level_demo/backdrop.png" id="1_8oyqd"]
+
+[sub_resource type="Animation" id="Animation_g6n6b"]
+resource_name = "level_panning"
+length = 120.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LevelAnchor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-460, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.4, 4.6, 4.7, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn_rock"
+}, {
+"args": [],
+"method": &"spawn_rock"
+}, {
+"args": [],
+"method": &"spawn_rock"
+}, {
+"args": [],
+"method": &"spawn_rock"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk8fd"]
+_data = {
+"level_panning": SubResource("Animation_g6n6b")
+}
+
+[node name="LevelDemo" type="Node2D"]
+script = ExtResource("1_1keww")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xk8fd")
+}
+
+[node name="LevelAnchor" type="Node2D" parent="."]
+position = Vector2(-150.267, 0)
+
+[node name="Backdrop" type="TextureRect" parent="LevelAnchor"]
+offset_right = 3328.0
+offset_bottom = 1902.0
+texture = ExtResource("1_8oyqd")
