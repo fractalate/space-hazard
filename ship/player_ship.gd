@@ -1,15 +1,21 @@
-extends Node2D
+extends RigidBody2D
 
-@onready var Ship = $RigidBody2D
-@onready var RearThrusterFlame = $RigidBody2D/RearThruster/Flame
-@onready var FrontThrusterFlame = $RigidBody2D/FrontThruster/Flame
-@onready var TopThruster1Flame = $RigidBody2D/TopThruster1/Flame
-@onready var TopThruster2Flame = $RigidBody2D/TopThruster2/Flame
-@onready var BottomThrusterFlame = $RigidBody2D/BottomThruster/Flame
-@onready var BottomLightLight = $RigidBody2D/BottomLight/Light
+class_name PlayerShip
 
+@onready var RearThrusterFlame = $RearThruster/Flame
+@onready var FrontThrusterFlame = $FrontThruster/Flame
+@onready var TopThruster1Flame = $TopThruster1/Flame
+@onready var TopThruster2Flame = $TopThruster2/Flame
+@onready var BottomThrusterFlame = $BottomThruster/Flame
+@onready var BottomLightLight = $BottomLight/Light
+
+# pixels per second per second
+const THRUST_ACCELERATION = 300
 const BOTTOM_LIGHT_CYCLE_TIME: float = 2.0
+
 var bottom_light_time_passed: float = 0.0
+var t0 = Time.get_ticks_usec()
+var t1 = Time.get_ticks_usec()
 
 func _ready():
 	RearThrusterFlame.visible = false
@@ -36,3 +42,15 @@ func _process(delta):
 		or
 		bottom_light_time_passed >= .7 * BOTTOM_LIGHT_CYCLE_TIME and bottom_light_time_passed <= .8 * BOTTOM_LIGHT_CYCLE_TIME
 	)
+
+func _integrate_forces(state):
+	var thrust = Input.get_vector('left', 'right', 'up', 'down')
+	t1 = Time.get_ticks_usec()
+	var delta = (t1 - t0) / 1e6
+	t0 = t1
+	linear_velocity += thrust * THRUST_ACCELERATION * delta
+
+func _physics_process(delta):
+	rotation = 0 # Don't rotate.
+
+	move_and_collide(linear_velocity * delta)

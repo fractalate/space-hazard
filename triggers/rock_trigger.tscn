@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmilplvhl6n1a"]
+
+[ext_resource type="Script" path="res://triggers/rock_trigger.gd" id="1_wqvap"]
+
+[node name="RockTrigger" type="Node2D"]
+position = Vector2(585, 221)
+script = ExtResource("1_wqvap")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D"]
+scale = Vector2(10, 10)
+color = Color(0.415686, 0.223529, 0.180392, 1)
+polygon = PackedVector2Array(-4, -3, 1, -4, 4, -2, 6, 0, 5, 2, 3, 5, 0, 4, -5, 4, -7, -1)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Node2D"]
+position = Vector2(8.66665, -9.13581)
+scale = Vector2(8.66667, 7.82716)
+color = Color(0.717647, 0.431373, 0.364706, 1)
+polygon = PackedVector2Array(-4, -3, 1, -4, 4, -2, 6, 0, 5, 2, 3, 5, 0, 4, -5, 4, -7, -1)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Node2D"]
+polygon = PackedVector2Array(-15, 0, 1, -19, 1, -6, 33, -7, 31, 2, 1, 4, -1, 16)

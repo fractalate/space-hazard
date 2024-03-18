@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://btgpptrjayqun"]
+[gd_scene load_steps=7 format=3 uid="uid://btgpptrjayqun"]
 
 [ext_resource type="Script" path="res://levels/level_demo/level_demo.gd" id="1_1keww"]
 [ext_resource type="Texture2D" uid="uid://cvr68gm76rqk2" path="res://levels/level_demo/backdrop.png" id="1_8oyqd"]
+[ext_resource type="PackedScene" uid="uid://dqb856udde4lq" path="res://hazards/scaffolding.tscn" id="3_3u4qt"]
+[ext_resource type="PackedScene" uid="uid://cmilplvhl6n1a" path="res://triggers/rock_trigger.tscn" id="4_5gy5o"]
 
 [sub_resource type="Animation" id="Animation_g6n6b"]
 resource_name = "level_panning"
@@ -21,19 +23,13 @@ tracks/0/keys = {
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".")
+tracks/1/path = NodePath("LevelAnchor/RockTrigger")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(4.4, 4.6, 4.7, 4.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(3.2, 4.7),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [],
-"method": &"spawn_rock"
-}, {
-"args": [],
-"method": &"spawn_rock"
-}, {
 "args": [],
 "method": &"spawn_rock"
 }, {
@@ -56,9 +52,30 @@ libraries = {
 }
 
 [node name="LevelAnchor" type="Node2D" parent="."]
-position = Vector2(-150.267, 0)
 
 [node name="Backdrop" type="TextureRect" parent="LevelAnchor"]
 offset_right = 3328.0
 offset_bottom = 1902.0
 texture = ExtResource("1_8oyqd")
+
+[node name="Scaffolding" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(894.267, 408)
+
+[node name="Scaffolding2" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(896.267, 291)
+
+[node name="Scaffolding3" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(975.267, 408)
+
+[node name="Scaffolding4" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(977.267, 291)
+
+[node name="Scaffolding5" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(1056.27, 408)
+
+[node name="Scaffolding6" parent="LevelAnchor" instance=ExtResource("3_3u4qt")]
+position = Vector2(1058.27, 291)
+
+[node name="RockTrigger" parent="LevelAnchor" instance=ExtResource("4_5gy5o")]
+position = Vector2(1214.2, 300)
+rotation = -0.817398

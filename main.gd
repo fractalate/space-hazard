@@ -17,9 +17,11 @@ func start_level_test():
 	add_child(playerShip)
 
 func start_level_demo():
-	add_child(LevelDemo.instantiate())
+	var level = LevelDemo.instantiate()
 	var playerShip = PlayerShip.instantiate()
 	playerShip.position = Vector2(viewport_width_initial, viewport_height_initial) / 2
+	level.set_ship(playerShip)
+	add_child(level)
 	add_child(playerShip)
 
 func set_main_menu_visible(visible: bool):

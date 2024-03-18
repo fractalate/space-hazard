@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dqb856udde4lq"]
+
+[node name="Scaffolding" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="TopPlate" type="Polygon2D" parent="."]
+color = Color(0.823529, 0.180392, 0.192157, 1)
+polygon = PackedVector2Array(0, 0, 93, 0, 93, 3, 0, 3)
+
+[node name="TopPlateShade" type="Polygon2D" parent="."]
+color = Color(0.690196, 0, 0.0862745, 1)
+polygon = PackedVector2Array(0, 2, 93, 2, 93, 3, 0, 3)
+
+[node name="BottomPlate" type="Polygon2D" parent="."]
+color = Color(0.823529, 0.180392, 0.192157, 1)
+polygon = PackedVector2Array(0, 39, 0, 42, 93, 42, 93, 39)
+
+[node name="BottomPlateShade" type="Polygon2D" parent="."]
+position = Vector2(0, 39)
+color = Color(0.690196, 0, 0.0862745, 1)
+polygon = PackedVector2Array(0, 2, 93, 2, 93, 3, 0, 3)
+
+[node name="CrossbarBack1" type="Polygon2D" parent="."]
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(8, 3, 35, 39, 31, 39, 4, 3)
+
+[node name="CrossbarForward1" type="Polygon2D" parent="."]
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(4, 39, 31, 3, 35, 3, 8, 39)
+
+[node name="CrossbarBackHighlight1" type="Polygon2D" parent="."]
+color = Color(0.686275, 0.686275, 0.686275, 1)
+polygon = PackedVector2Array(11, 7, 33, 36, 32, 37, 9, 7)
+
+[node name="CrossbarForwardShadeA1" type="Polygon2D" parent="."]
+color = Color(0.372549, 0.372549, 0.372549, 1)
+polygon = PackedVector2Array(19.5, 23.54, 18, 21, 15, 25, 17, 27)
+
+[node name="CrossbarForwardShadeB1" type="Polygon2D" parent="."]
+color = Color(0.32549, 0.32549, 0.32549, 1)
+polygon = PackedVector2Array(31, 3, 4, 39, 6, 39, 33, 3)
+
+[node name="CrossbarBackShade1" type="Polygon2D" parent="."]
+color = Color(0.368627, 0.368627, 0.368627, 1)
+polygon = PackedVector2Array(6, 3, 9, 7, 11, 7, 8, 3)
+
+[node name="CrossbarBack2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(8, 3, 35, 39, 31, 39, 4, 3)
+
+[node name="CrossbarForward2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(4, 39, 31, 3, 35, 3, 8, 39)
+
+[node name="CrossbarBackHighlight2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.686275, 0.686275, 0.686275, 1)
+polygon = PackedVector2Array(11, 7, 33, 36, 32, 37, 9, 7)
+
+[node name="CrossbarForwardShadeA2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.372549, 0.372549, 0.372549, 1)
+polygon = PackedVector2Array(19.5, 23.54, 18, 21, 15, 25, 17, 27)
+
+[node name="CrossbarForwardShadeB2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.32549, 0.32549, 0.32549, 1)
+polygon = PackedVector2Array(31, 3, 4, 39, 6, 39, 33, 3)
+
+[node name="CrossbarBackShade2" type="Polygon2D" parent="."]
+position = Vector2(27, 0)
+color = Color(0.368627, 0.368627, 0.368627, 1)
+polygon = PackedVector2Array(6, 3, 9, 7, 11, 7, 8, 3)
+
+[node name="CrossbarBack3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(8, 3, 35, 39, 31, 39, 4, 3)
+
+[node name="CrossbarForward3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.47451, 0.47451, 0.47451, 1)
+polygon = PackedVector2Array(4, 39, 31, 3, 35, 3, 8, 39)
+
+[node name="CrossbarBackHighlight3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.686275, 0.686275, 0.686275, 1)
+polygon = PackedVector2Array(11, 7, 35, 39, 33, 39, 9, 7)
+
+[node name="CrossbarForwardShadeA3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.372549, 0.372549, 0.372549, 1)
+polygon = PackedVector2Array(19.5, 23.54, 18, 21, 15, 25, 17, 27)
+
+[node name="CrossbarForwardShadeB3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.32549, 0.32549, 0.32549, 1)
+polygon = PackedVector2Array(31, 3, 4, 39, 6, 39, 33, 3)
+
+[node name="CrossbarBackShade3" type="Polygon2D" parent="."]
+position = Vector2(54, 0)
+color = Color(0.368627, 0.368627, 0.368627, 1)
+polygon = PackedVector2Array(6, 3, 9, 7, 11, 7, 8, 3)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, 0, 0, 3, 4, 3, 17, 21, 4, 39, 0, 39, 0, 42, 93, 42, 93, 39, 89, 39, 76, 21, 89, 3, 93, 3, 93, 0)
